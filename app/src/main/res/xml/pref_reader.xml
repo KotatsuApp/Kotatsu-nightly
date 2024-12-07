@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:title="@string/reader_settings">
+
+	<ListPreference
+		android:entries="@array/reader_modes"
+		android:key="reader_mode"
+		android:title="@string/default_mode"
+		app:useSimpleSummaryProvider="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="true"
+		android:key="reader_mode_detect"
+		android:summary="@string/detect_reader_mode_summary"
+		android:title="@string/detect_reader_mode" />
+
+	<ListPreference
+		android:entries="@array/zoom_modes"
+		android:key="zoom_mode"
+		android:title="@string/scale_mode"
+		app:allowDividerAbove="true"
+		app:useSimpleSummaryProvider="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="true"
+		android:key="webtoon_zoom"
+		android:summary="@string/webtoon_zoom_summary"
+		android:title="@string/webtoon_zoom" />
+
+	<org.koitharu.kotatsu.settings.utils.SliderPreference
+		android:dependency="webtoon_zoom"
+		android:key="webtoon_zoom_out"
+		android:stepSize="10"
+		android:title="@string/default_webtoon_zoom_out"
+		android:valueFrom="0"
+		android:valueTo="50"
+		app:defaultValue="0"
+		app:tickVisible="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="reader_zoom_buttons"
+		android:summary="@string/reader_zoom_buttons_summary"
+		android:title="@string/reader_zoom_buttons" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="webtoon_gaps"
+		android:summary="@string/webtoon_gaps_summary"
+		android:title="@string/webtoon_gaps" />
+
+	<Preference
+		android:key="reader_tap_actions"
+		android:persistent="false"
+		android:summary="@string/reader_actions_summary"
+		android:title="@string/reader_actions"
+		app:allowDividerAbove="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="reader_taps_ltr"
+		android:summary="@string/reader_control_ltr_summary"
+		android:title="@string/reader_control_ltr" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="reader_volume_buttons"
+		android:summary="@string/switch_pages_volume_buttons_summary"
+		android:title="@string/switch_pages_volume_buttons" />
+
+	<ListPreference
+		android:entries="@array/reader_animation"
+		android:key="reader_animation2"
+		android:title="@string/pages_animation"
+		app:useSimpleSummaryProvider="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="enhanced_colors"
+		android:summary="@string/enhanced_colors_summary"
+		android:title="@string/enhanced_colors"
+		app:allowDividerAbove="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="reader_optimize"
+		android:summary="@string/reader_optimize_summary"
+		android:title="@string/reader_optimize" />
+
+	<MultiSelectListPreference
+		android:entries="@array/reader_crop"
+		android:entryValues="@array/values_reader_crop"
+		android:key="reader_crop"
+		android:title="@string/crop_pages" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="true"
+		android:key="reader_fullscreen"
+		android:summary="@string/reader_fullscreen_summary"
+		android:title="@string/fullscreen_mode"
+		app:allowDividerAbove="true" />
+
+	<ListPreference
+		android:entries="@array/screen_orientations"
+		android:key="reader_orientation"
+		android:title="@string/screen_orientation"
+		app:useSimpleSummaryProvider="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="true"
+		android:key="reader_screen_on"
+		android:summary="@string/keep_screen_on_summary"
+		android:title="@string/keep_screen_on" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="true"
+		android:key="reader_bar"
+		android:summary="@string/reader_info_bar_summary"
+		android:title="@string/reader_info_bar"
+		app:allowDividerAbove="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="true"
+		android:key="reader_slider"
+		android:title="@string/reader_slider" />
+
+	<ListPreference
+		android:entries="@array/reader_backgrounds"
+		android:key="reader_background"
+		android:title="@string/background"
+		app:useSimpleSummaryProvider="true" />
+
+	<SwitchPreferenceCompat
+		android:defaultValue="false"
+		android:key="pages_numbers"
+		android:summary="@string/show_pages_numbers_summary"
+		android:title="@string/show_pages_numbers" />x
+
+	<ListPreference
+		android:defaultValue="2"
+		android:entries="@array/network_policy"
+		android:entryValues="@array/values_network_policy"
+		android:key="pages_preload"
+		android:title="@string/preload_pages"
+		app:useSimpleSummaryProvider="true" />
+
+</PreferenceScreen>

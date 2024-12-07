@@ -1,0 +1,8 @@
+**App update:**
+
+- Update dependencies (parsers)
+- Update translations: Arabic, Polish, Serbian, Spanish, French,...
+
+**Parsers update:**
+
+- Nothing changed...

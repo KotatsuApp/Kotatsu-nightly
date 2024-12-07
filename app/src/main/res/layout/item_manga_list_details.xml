@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:background="@drawable/custom_selectable_item_background"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<androidx.constraintlayout.widget.ConstraintLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<com.google.android.material.imageview.ShapeableImageView
+			android:id="@+id/imageView_cover"
+			android:layout_width="0dp"
+			android:layout_height="118dp"
+			android:background="?colorSurfaceContainer"
+			android:scaleType="centerCrop"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintDimensionRatio="2:3"
+			app:layout_constraintStart_toStartOf="parent"
+			app:layout_constraintTop_toTopOf="parent"
+			app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.Kotatsu.Cover.Medium"
+			tools:src="@tools:sample/backgrounds/scenic" />
+
+		<org.koitharu.kotatsu.history.ui.util.ReadingProgressView
+			android:id="@+id/progressView"
+			android:layout_width="@dimen/card_indicator_size"
+			android:layout_height="@dimen/card_indicator_size"
+			android:layout_margin="@dimen/card_indicator_offset"
+			app:layout_constraintBottom_toBottomOf="@id/imageView_cover"
+			app:layout_constraintEnd_toEndOf="@id/imageView_cover" />
+
+		<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintEnd_toEndOf="parent"
+			app:layout_constraintStart_toEndOf="@+id/imageView_cover"
+			app:layout_constraintTop_toTopOf="parent"
+			android:layout_marginStart="16dp"
+			android:layout_marginEnd="12dp">
+
+			<TextView
+				android:id="@+id/textView_title"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:ellipsize="end"
+				app:lineHeight="18dp"
+				android:maxLines="3"
+				android:textAppearance="?attr/textAppearanceBodyLarge"
+				tools:text="@tools:sample/lorem/random" />
+
+			<TextView
+				android:id="@+id/textView_author"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:ellipsize="end"
+				android:gravity="center_vertical"
+				android:maxLines="1"
+				android:textAppearance="?attr/textAppearanceBodyMedium"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/imageView_cover"
+				app:layout_constraintTop_toBottomOf="@+id/textView_title"
+				tools:text="@tools:sample/lorem/random" />
+
+			<TextView
+				android:id="@+id/textView_tags"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="4dp"
+				android:ellipsize="end"
+				app:lineHeight="14dp"
+				android:gravity="center_vertical"
+				android:maxLines="2"
+				android:textAppearance="?attr/textAppearanceBodySmall"
+				app:layout_constraintEnd_toEndOf="parent"
+				app:layout_constraintStart_toEndOf="@+id/imageView_cover"
+				app:layout_constraintTop_toBottomOf="@+id/textView_author"
+				tools:text="@tools:sample/lorem/random" />
+
+		</LinearLayout>
+
+	</androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
